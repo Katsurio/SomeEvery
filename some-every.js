@@ -59,7 +59,7 @@ function hasNoDuplicates(arr) {
     return arr.indexOf(val) === arr.lastIndexOf(val)
   })
 }
-console.log(hasNoDuplicates([1, 2, 31, 1]))
+// console.log(hasNoDuplicates([1, 2, 31, 1]))
 /*
 Write a function called hasCertainKey which accepts an array of objects and a key, and returns true if every single object in the array contains that key. Otherwise it should return false.
 
@@ -75,8 +75,22 @@ Examples:
     hasCertainKey(arr,'isCatOwner') // false
 */
 
-function hasCertainKey(arr, key) {}
-
+function hasCertainKey(arr, key) {
+  return arr.every((val) => {
+    return val.hasOwnProperty(key)
+  })
+}
+// console.log(
+//   hasCertainKey(
+//     [
+//       { title: 'Instructor', first: 'Elie', last: 'Schoppik' },
+//       { title: 'Instructor', first: 'Tim', last: 'Garcia', isCatOwner: true },
+//       { title: 'Instructor', first: 'Matt', last: 'Lane' },
+//       { title: 'Instructor', first: 'Colt', last: 'Steele', isCatOwner: true },
+//     ],
+//     'isCatOwner',
+//   ),
+// )
 /*
 Write a function called hasCertainValue which accepts an array of objects and a key, and a value, and returns true if every single object in the array contains that value for the specific key. Otherwise it should return false.
 
